@@ -13,7 +13,7 @@ export class CreateUserService {
 
     console.log("got in here!")
     if(await repo.findOne({email})){
-      return new Error("Category already exists")
+      return new Error("User already exists")
     }
 
     const user = repo.create({
