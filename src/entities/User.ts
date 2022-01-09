@@ -18,6 +18,12 @@ export class User {
   
   @Column()
   email: string;
+
+  @Column({ nullable: true})
+  api_key: string;
+
+  @Column({ nullable: true})
+  api_secret: string;
   
   @Column()
   password: string;

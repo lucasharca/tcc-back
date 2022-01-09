@@ -25,6 +25,16 @@ export class Users1641519045977 implements MigrationInterface {
             isUnique: true
           },
           {
+            name: "api_key",
+            type: "varchar",
+            isNullable: true,
+          },
+          {
+            name: "api_secret",
+            type: "varchar",
+            isNullable: true
+          },
+          {
             name: "password",
             type: "varchar",
             isNullable: false,

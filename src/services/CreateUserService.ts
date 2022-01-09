@@ -19,6 +19,8 @@ export class CreateUserService {
     const user = repo.create({
       name, 
       email,
+      api_key: null,
+      api_secret: null,
       password
     })
 
