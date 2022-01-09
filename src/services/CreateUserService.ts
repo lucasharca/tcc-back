@@ -22,8 +22,6 @@ export class CreateUserService {
       password
     })
 
-    console.log("opa", user)
-
     await repo.save(user);
     return user;
   }
