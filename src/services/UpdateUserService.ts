@@ -21,11 +21,11 @@ export class UpdateUserService {
       return new Error("User does note exist");
     }
 
-    user.name = name;
-    user.email = email;
-    user.api_key = api_key;
-    user.api_secret = api_secret;
-    user.password = password;
+    user.name = name ? name : user.name;
+    user.email = email ? email : user.email;
+    user.api_key = api_key ? api_key : user.api_key;
+    user.api_secret = api_secret ? api_secret : user.api_secret;
+    user.password = password ? password : user.password;
 
     const savedUser = await repo.save(user)
 

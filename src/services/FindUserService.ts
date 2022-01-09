@@ -16,10 +16,10 @@ export class FindUserService {
       return new Error("User not found")
     }
 
-    const token = jwt.sign({ id: user.id, name: user.name, email: user.email }, config.secret, {
+    const token = jwt.sign({ id: user.id }, config.secret, {
       expiresIn: (1000 * 60 * 60 * 24 * 7)
     })
 
-    return { token };
+    return { token, user };
   }
 }
