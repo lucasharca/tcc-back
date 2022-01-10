@@ -11,7 +11,7 @@ const routes = Router();
 //User Routes
 routes.post("/user", new CreateUserController().handle);
 routes.get("/users", new GetUsersController().handle);
-routes.get("/login", new FindUserController().handle);
+routes.post("/login", new FindUserController().handle);
 routes.put("/user", new UpdateUserController().handle);
 routes.delete("/user", new DeleteUserController().handle);
 
