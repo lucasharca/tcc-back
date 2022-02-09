@@ -9,6 +9,9 @@ import { GetBinanceDataController } from './controllers/GetBinanceDataController
 const routes = Router();
 
 //User Routes
+routes.get("/health", (req,res) => {
+  return res.json({message: "Server is online!!"})
+})
 routes.post("/user", new CreateUserController().handle);
 routes.get("/users", new GetUsersController().handle);
 routes.post("/login", new FindUserController().handle);
